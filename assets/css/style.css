@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.a{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    transition: width 2s;
+}
+
+.a:hover{
+    width: 100%;
+}
+
+/* -------------- Lev1_2 ------------------- */
+
+.box{
+    border: 1px solid;
+    height: 70px;
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.box:hover .b{
+    left: 90%;
+    transition: left 4s ease-out;
+}
+
+.box:hover .c{
+    left: 90%;
+    transition: left 3s ease-in 1s;
+}
+
+.b{
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: left 3s ease-out;
+}
+
+.c{
+    height: 30px;
+    width: 30px;
+    background-color: green;
+    position: absolute;
+    top: 56%;
+    left: 0%;
+    transition: left 3s ease-in;
+}
+
+/* ----------------- Lev2_1 -------------------- */
+
+.pic{
+    margin: 0 auto;
+    height: 50vh;
+    width: 30%;
+    background: url(../img/1.png) no-repeat center/cover;
+    position: relative;
+    overflow: hidden;
+}
+
+p{
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.212));
+    transition: top 1s ease-out;
+    color: #fff;
+    font-size: 3rem;
+    padding-top: 30%;
+}
+
+.pic:hover p{
+    top: 0%;
+    transition: top .5s ease-out;
+}
+
+/* -------------------- Lev3_1 ---------------------- */
+.balls{
+    
+    height: 11vh;
+    border: 1px solid;
+    position: relative;
+}
+
+.big{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    background: plum;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    align-items: center;
+    font-size: .8rem;
+    transition: left 2s linear;
+}
+
+.small{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background: lightblue;
+    border-radius: 50%;
+    position: absolute;
+    top: 49%;
+    left: 8%;
+    transition: left 2s linear;
+}
+
+.big:active{
+    left: 3.1%;
+    transition: left 2s linear;
+}
+
+.big:active + .small{
+    left: 40%;
+    transition: left 2s linear 2s;
+}
